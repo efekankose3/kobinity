@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kobinity | KOBİ İşbirliği Platformu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Kobinity</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Ana Sayfa</a></li>
+                    <li><a href="#features">Özellikler</a></li>
+                    <li><a href="#how-it-works">Nasıl Çalışır</a></li>
+                    <li><a href="#investment">Yatırım Fırsatları</a></li>
+                    <li><a href="#success-stories">Başarı Hikayeleri</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-outline">Giriş Yap</a>
+                <a href="#" class="btn btn-primary">Kaydol</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>KOBİ'ler İçin İşbirliği ve Yatırım Platformu</h1>
+                <p>Kobinity ile iş ortakları bulun, yatırım fırsatları yakalayın, finansal verilerinizi yönetin ve kazançlı büyümenin parçası olun.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">Hemen Başlayın</a>
+                    <a href="#how-it-works" class="btn btn-secondary">Nasıl Çalışır</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://unsplash.com/photos/NbtIDoFKGO8/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8YnVzaW5lc3MlMjBwYXJ0bmVyc2hpcCUyMGhhbmRzaGFrZXxlbnwwfHx8fDE3MTg3MDgxMzV8MA&force=true" alt="KOBİ İşbirliği">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Platformun Özellikleri</h2>
+                <p>Kobinity ile işletmenizi büyütmenin yolları</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" onclick="openFeatureModal(0)">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>İş Ortaklıkları</h3>
+                    <p>Sektörünüzde tamamlayıcı hizmetler sunan işletmelerle kolayca bağlantı kurun.</p>
+                </div>
+                <div class="feature-card" onclick="openFeatureModal(1)">
+                    <div class="feature-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Ortak Projeler</h3>
+                    <p>Birlikte çalışarak daha büyük projeleri üstlenin ve kapasitelerinizi birleştirin.</p>
+                </div>
+                <div class="feature-card" onclick="openFeatureModal(2)">
+                    <div class="feature-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Yatırım Fırsatları</h3>
+                    <p>İşletmeniz için yatırım ilanları oluşturun, bireysel ve kurumsal yatırımcılarla buluşun.</p>
+                </div>
+                <div class="feature-card" onclick="openFeatureModal(3)">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Finansal Şeffaflık</h3>
+                    <p>Muhasebe verilerinizi sisteme entegre ederek yatırımcılara ve bankalara güven verin.</p>
+                </div>
+                <div class="feature-card" onclick="openFeatureModal(4)">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Rekabet Analizi</h3>
+                    <p>Sektörünüzdeki rakiplerinizi analiz edin, pazar konumunuzu güçlendirin.</p>
+                </div>
+                <div class="feature-card" onclick="openFeatureModal(5)">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>İletişim Araçları</h3>
+                    <p>Güvenli messaging sistemi ile potansiyel iş ortaklarınızla kolayca iletişim kurun.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Modal -->
+    <div id="featureModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeFeatureModal()">&times;</span>
+            <div class="modal-navigation">
+                <button class="nav-button prev" onclick="navigateFeature(-1)"><i class="fas fa-chevron-left"></i></button>
+                <div class="modal-body">
+                    <!-- Modal content will be loaded dynamically -->
+                </div>
+                <button class="nav-button next" onclick="navigateFeature(1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="modal-dots">
+                <!-- Dots will be added dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nasıl Çalışır?</h2>
+                <p>Kobinity platformu KOBİ\'ler, yatırımcılar ve iş ortakları için basit ve etkili bir süreç sunar.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Profilinizi Oluşturun</h3>
+                            <p>İşletmenizin bilgilerini, muhasebe verilerinizi ve finansal dökümanlarınızı sisteme yükleyin.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Kendinizi Tanıtın</h3>
+                            <p>Uzmanlık alanlarınızı, iş birliği yapabileceğiniz konuları ve yatırım ihtiyaçlarınızı belirtin.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>İş Ortakları ve Yatırımcılar Bulun</h3>
+                            <p>Gelişmiş arama filtreleri ile potansiyel iş ortaklarını ve yatırımcıları keşfedin.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>İşbirliği Yapın ve Büyüyün</h3>
+                            <p>Anlaşmalarınızı yapın, yatırım alın ve işletmenizi bir sonraki seviyeye taşıyın.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Section -->
+    <section id="investment" class="investment">
+        <div class="container">
+            <div class="section-header">
+                <h2>Yatırım Fırsatları</h2>
+                <p>İşletmenize sermaye bulun veya yatırımcı olarak fırsatları değerlendirin</p>
+            </div>
+            <div class="row gy-4 investment-types justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="investment-card">
+                        <div class="investment-icon">
+                            
+                        </div>
+                        <h3>KOBİ\'ler İçin</h3>
+                        <p>İşletmenizi büyütmek, yeni projelere başlamak veya teknolojik altyapınızı güçlendirmek için ihtiyaç duyduğunuz finansmana Kobinity üzerinden ulaşın. Yatırımcılarla buluşarak hedeflerinize bir adım daha yaklaşın.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="investment-card">
+                        <div class="investment-icon">
+                            
+                        </div>
+                        <h3>Bireysel Yatırımcılar İçin</h3>
+                        <p>Büyüme potansiyeli yüksek KOBİ\'lere yatırım yaparak portföyünüzü çeşitlendirin. Kobinity\'nin sunduğu şeffaf veriler ve analiz araçları ile bilinçli yatırım kararları alın, geleceğin başarılı işletmelerine ortak olun.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="investment-card">
+                        <div class="investment-icon">
+                            
+                        </div>
+                        <h3>Kurumsal Yatırımcılar İçin</h3>
+                        <p>Stratejik yatırım hedeflerinize uygun, yenilikçi ve ölçeklenebilir projelere sahip KOBİ\'leri keşfedin. Kobinity, detaylı firma profilleri ve finansal raporlarla kurumsal yatırım süreçlerinizi kolaylaştırır.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header" style="margin-top: 4rem;">
+                <h3>Güncel Yatırım Fırsatları</h3>
+                <p>Yatırım bekleyen KOBİ'ler</p>
+            </div>
+            
+            <div class="investment-opportunities">
+                <div class="opportunity-card featured">
+                    <div class="opportunity-badge featured-badge">Yazılım</div>
+                    <div class="featured-label">Öne Çıkan</div>
+                    <h3>E-Ticaret Çözümleri Platformu</h3>
+                    <div class="opportunity-details">
+                        <div class="opportunity-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>İstanbul</span>
+                        </div>
+                        <div class="opportunity-detail">
+                            <i class="fas fa-chart-line"></i>
+                            <span>2.500.000 TL</span>
+                        </div>
+                        <div class="opportunity-detail">
+                            <i class="fas fa-percentage"></i>
+                            <span>%18 Ortaklık</span>
+                        </div>
+                    </div>
+                    <p>KOBİ'lere özel geliştirdiğimiz e-ticaret yazılım çözümleri 250+ aktif müşteriye ulaştı. Uluslararası büyüme planlarımız için stratejik ortak arıyoruz.</p>
+                    <div class="opportunity-footer">
+                        <div class="opportunity-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 72%"></div>
+                            </div>
+                            <span>1.800.000 TL toplandı</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Detayları Gör</a>
+                    </div>
+                </div>
+                
+                <div class="opportunity-card">
+                    <div class="opportunity-badge">Teknoloji</div>
+                    <h3>Mobil Uygulama Geliştirme Şirketi</h3>
+                    <div class="opportunity-details">
+                        <div class="opportunity-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>İstanbul</span>
+                        </div>
+                        <div class="opportunity-detail">
+                            <i class="fas fa-chart-line"></i>
+                            <span>500.000 TL</span>
+                        </div>
+                        <div class="opportunity-detail">
+                            <i class="fas fa-percentage"></i>
+                            <span>%15 Ortaklık</span>
+                        </div>
+                    </div>
+                    <p>Son 2 yılda %120 büyüme kaydeden mobil uygulama geliştirme şirketimiz, uluslararası pazara açılmak için yatırımcı arıyor.</p>
+                    <div class="opportunity-footer">
+                        <div class="opportunity-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 65%"></div>
+                            </div>
+                            <span>325.000 TL toplandı</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Detayları Gör</a>
+                    </div>
+                </div>
+                
+                <div class="opportunity-card">
+                    <div class="opportunity-badge">Gıda</div>
+                    <h3>Organik Gıda Üreticisi</h3>
+                    <div class="opportunity-details">
+                        <div class="opportunity-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>İzmir</span>
+                        </div>
+                        <div class="opportunity-detail">
+                            <i class="fas fa-chart-line"></i>
+                            <span>750.000 TL</span>
+                        </div>
+                        <div class="opportunity-detail">
+                            <i class="fas fa-percentage"></i>
+                            <span>%20 Ortaklık</span>
+                        </div>
+                    </div>
+                    <p>Yerel üreticilerle çalışan organik gıda işletmemiz, üretim kapasitesini artırmak ve yeni pazarlara açılmak için yatırım arıyor.</p>
+                    <div class="opportunity-footer">
+                        <div class="opportunity-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 40%"></div>
+                            </div>
+                            <span>300.000 TL toplandı</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Detayları Gör</a>
+                    </div>
+                </div>
+                
+                <div class="opportunity-card">
+                    <div class="opportunity-badge">Üretim</div>
+                    <h3>Mobilya Üretim Atölyesi</h3>
+                    <div class="opportunity-details">
+                        <div class="opportunity-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Ankara</span>
+                        </div>
+                        <div class="opportunity-detail">
+                            <i class="fas fa-chart-line"></i>
+                            <span>1.200.000 TL</span>
+                        </div>
+                        <div class="opportunity-detail">
+                            <i class="fas fa-percentage"></i>
+                            <span>%25 Ortaklık</span>
+                        </div>
+                    </div>
+                    <p>10 yıllık tecrübeye sahip mobilya atölyemiz, yeni CNC makineleri alımı ve ihracat operasyonları için sermaye arayışında.</p>
+                    <div class="opportunity-footer">
+                        <div class="opportunity-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                            <span>1.020.000 TL toplandı</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Detayları Gör</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all-opportunities">
+                <a href="#" class="btn btn-secondary">Tüm Fırsatları Gör</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Transparency Section -->
+    <section class="transparency">
+        <div class="container">
+            <div class="section-header">
+                <h2>Finansal Şeffaflık Avantajları</h2>
+                <p>Muhasebe verilerinizi Kobinity ile yönetmenin faydaları</p>
+            </div>
+            <div class="transparency-cards">
+                <div class="transparency-card">
+                    <div class="card-icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Yatırımcı Güveni</h3>
+                        <p>Şeffaf finansal verilerinizle yatırımcıların güvenini kazanın ve yatırım alma sürecinizi hızlandırın.</p>
+                        <ul class="benefit-list">
+                            <li>Yatırımcılar için doğrulanmış finansal veriler</li>
+                            <li>Güven temelli yatırım ilişkisi</li>
+                            <li>Daha hızlı yatırım kararları</li>
+                        </ul>
+                        
+                        <a href="#" class="card-link">Nasıl Çalışır <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="transparency-card">
+                    <div class="card-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Kredi Avantajları</h3>
+                        <p>Bankalardan kredi alırken doğrulanmış finansal verilerinizle daha avantajlı koşullar elde edin.</p>
+                        <ul class="benefit-list">
+                            <li>Bankalara hazır finansal raporlar</li>
+                            <li>Hızlandırılmış kredi başvuru süreci</li>
+                            <li>Daha uygun faiz oranları</li>
+                        </ul>
+                        
+                        <a href="#" class="card-link">Banka Ortaklarımız <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="transparency-card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Rekabet Analizi</h3>
+                        <p>Sektör ortalamaları ile kendi performansınızı karşılaştırın ve iyileştirme alanlarını tespit edin.</p>
+                        <ul class="benefit-list">
+                            <li>Sektörel karşılaştırma raporları</li>
+                            <li>Rekabet avantajı sağlayan öngörüler</li>
+                            <li>Sektör trendlerini analiz etme</li>
+                        </ul>
+                        
+                        <a href="#" class="card-link">Örnek Analiz <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="transparency-card">
+                    <div class="card-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Entegre Muhasebe</h3>
+                        <p>Muhasebe verilerinizi tek bir platformda yönetin, zaman ve maliyetten tasarruf edin.</p>
+                        <ul class="benefit-list">
+                            <li>Otomatik veri senkronizasyonu</li>
+                            <li>Bulut tabanlı veri yönetimi</li>
+                            <li>Popüler muhasebe yazılımları ile entegrasyon</li>
+                        </ul>
+                        
+                        <a href="#" class="card-link">Desteklenen Yazılımlar <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section id="success-stories" class="success-stories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Başarı Hikayeleri</h2>
+                <p>Kobinity ile başarıya ulaşan işletmeler</p>
+            </div>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Kobinity sayesinde mobilya üretim kapasitemizi arttıracak bir ortak bulduk. Şimdi daha büyük projeleri üstlenebiliyoruz."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://www.freestockphotos.biz/pictures/15/15118/Illustration+of+a+businessman.png" alt="Ahmet Yılmaz">
+                        <div>
+                            <h4>Ahmet Yılmaz</h4>
+                            <p>Mobilya Üreticisi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Yazılım şirketimiz için tamamlayıcı hizmetler sunan bir tasarım ajansı ile tanıştık. Müşterilerimize artık daha kapsamlı çözümler sunabiliyoruz."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://www.freestockphotos.biz/pictures/15/15665/Illustration+of+a+businesswoman.png" alt="Zeynep Kaya">
+                        <div>
+                            <h4>Zeynep Kaya</h4>
+                            <p>Yazılım Şirketi Sahibi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Gıda ihracatı için lojistik desteği arıyorduk. Platformda tanıştığımız lojistik firması ile maliyetlerimizi düşürdük ve verimliliğimizi artırdık."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://www.freestockphotos.biz/pictures/16/16050/Illustration+of+a+businessman+avatar.png" alt="Mehmet Demir">
+                        <div>
+                            <h4>Mehmet Demir</h4>
+                            <p>Gıda İhracatçısı</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3 class="counter">1500+</h3>
+                    <p>Kayıtlı İşletme</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="counter">750+</h3>
+                    <p>Başarılı İşbirliği</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="counter">250+</h3>
+                    <p>Yatırım İlanı</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="counter">120M+</h3>
+                    <p>Toplam Yatırım (TL)</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="counter">25+</h3>
+                    <p>Farklı Sektör</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="counter">4.8/5</h3>
+                    <p>Kullanıcı Memnuniyeti</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>İşletmenizi Büyütmeye Hazır Mısınız?</h2>
+            <p>Kobinity ile doğru iş ortaklarını ve yatırımcıları bulun, finansal verilerinizi şeffaf bir şekilde yönetin ve birlikte büyüyün.</p>
+            <a href="#" class="btn btn-primary">Hemen Kaydolun</a>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>İletişim</h2>
+                <p>Sorularınız mı var? Bize ulaşın</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>İstanbul, Türkiye</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@kobinity.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+90 212 123 4567</p>
+                    </div>
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Adınız Soyadınız" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="E-posta Adresiniz" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="Konu" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Mesajınız" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Kobinity</h2>
+                    <p>KOBİ'leri birleştiren işbirliği ve yatırım platformu</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h3>Platform</h3>
+                        <ul>
+                            <li><a href="#features">Özellikler</a></li>
+                            <li><a href="#how-it-works">Nasıl Çalışır</a></li>
+                            <li><a href="#investment">Yatırım</a></li>
+                            <li><a href="#success-stories">Başarı Hikayeleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h3>Şirket</h3>
+                        <ul>
+                            <li><a href="#">Hakkımızda</a></li>
+                            <li><a href="#">Kariyer</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h3>Destek</h3>
+                        <ul>
+                            <li><a href="#">SSS</a></li>
+                            <li><a href="#">Yardım Merkezi</a></li>
+                            <li><a href="#contact">İletişim</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Kobinity. Tüm hakları saklıdır.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Gizlilik Politikası</a>
+                    <a href="#">Kullanım Koşulları</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Feature Modal Gallery
+        const featureModal = document.getElementById('featureModal');
+        const modalBody = document.querySelector('.modal-body');
+        const modalDots = document.querySelector('.modal-dots');
+        let currentFeatureIndex = 0;
+        
+        // Feature data
+        const featureData = [
+            {
+                title: "İş Ortaklıkları",
+                icon: "handshake",
+                content: `
+                    <h2>İş Ortaklıkları</h2>
+                    <div class="modal-feature-icon"><i class="fas fa-handshake"></i></div>
+                    <p>Kobinity\'nin iş ortaklığı özelliği, sektörünüzde tamamlayıcı hizmetler sunan diğer KOBİ\'ler ile bağlantı kurmanızı sağlar.</p>
+                    <h3>Bu özellik ile:</h3>
+                    <ul>
+                        <li>Özel arama filtreleriyle size uygun iş ortaklarını bulun</li>
+                        <li>Karşılıklı fayda sağlayacak işbirlikleri geliştirin</li>
+                        <li>Sektörünüzde stratejik ortaklıklar kurun</li>
+                        <li>Tedarik zincirinizi genişletin ve güçlendirin</li>
+                    </ul>
+                    <p>İş ortaklığı teklifleri gönderin ve almanızı sağlayan platformumuz, her iki tarafın da kazanacağı işbirlikleri kurmanıza olanak tanır.</p>
+                `
+            },
+            {
+                title: "Ortak Projeler",
+                icon: "project-diagram",
+                content: `
+                    <h2>Ortak Projeler</h2>
+                    <div class="modal-feature-icon"><i class="fas fa-project-diagram"></i></div>
+                    <p>Birlikte çalışarak daha büyük projeleri üstlenin ve iş kapasitelerinizi birleştirerek daha büyük fırsatları değerlendirin.</p>
+                    <h3>Bu özellik ile:</h3>
+                    <ul>
+                        <li>Büyük projelere ortak teklif verin</li>
+                        <li>Proje yönetim araçları ile süreçleri takip edin</li>
+                        <li>Görev dağılımlarını kolayca yönetin</li>
+                        <li>Ortak proje takvimleri oluşturun</li>
+                    </ul>
+                    <p>Normalde tek başınıza üstlenemeyeceğiniz projeler için güçlerinizi birleştirin ve ortak başarıya ulaşın.</p>
+                `
+            },
+            {
+                title: "Yatırım Fırsatları",
+                icon: "coins",
+                content: `
+                    <h2>Yatırım Fırsatları</h2>
+                    <div class="modal-feature-icon"><i class="fas fa-coins"></i></div>
+                    <p>İşletmeniz için sermaye bulun veya büyüme potansiyeli olan KOBİ\'lere yatırım yapın.</p>
+                    <h3>Bu özellik ile:</h3>
+                    <ul>
+                        <li>İşletmeniz için yatırım ilanları oluşturun</li>
+                        <li>Bireysel ve kurumsal yatırımcılarla doğrudan bağlantı kurun</li>
+                        <li>Yatırım tekliflerini karşılaştırın ve değerlendirin</li>
+                        <li>Yatırımcı olarak fırsatları keşfedin</li>
+                    </ul>
+                    <p>Şeffaf finansal veriler sayesinde yatırımcılar ile güven temelli ilişkiler kurun ve büyüme hedeflerinize daha hızlı ulaşın.</p>
+                `
+            },
+            {
+                title: "Finansal Şeffaflık",
+                icon: "chart-pie",
+                content: `
+                    <h2>Finansal Şeffaflık</h2>
+                    <div class="modal-feature-icon"><i class="fas fa-chart-pie"></i></div>
+                    <p>Muhasebe verilerinizi sisteme entegre ederek yatırımcılara ve iş ortaklarınıza güven verin.</p>
+                    <h3>Bu özellik ile:</h3>
+                    <ul>
+                        <li>Muhasebe verilerinizi güvenli bir şekilde yönetin</li>
+                        <li>Doğrulanmış finansal raporlar oluşturun</li>
+                        <li>Bankalardan kredi alırken avantaj sağlayın</li>
+                        <li>Yatırımcılara şeffaf bir bakış açısı sunun</li>
+                    </ul>
+                    <p>Finansal şeffaflık, işletmenizin güvenilirliğini artırır ve yeni fırsatların kapılarını açar.</p>
+                `
+            },
+            {
+                title: "Rekabet Analizi",
+                icon: "chart-line",
+                content: `
+                    <h2>Rekabet Analizi</h2>
+                    <div class="modal-feature-icon"><i class="fas fa-chart-line"></i></div>
+                    <p>Sektörünüzdeki rakiplerinizi analiz edin ve pazar konumunuzu güçlendirin.</p>
+                    <h3>Bu özellik ile:</h3>
+                    <ul>
+                        <li>Sektör ortalamaları ile performansınızı karşılaştırın</li>
+                        <li>Rekabet gücünüzü artıracak fırsatları keşfedin</li>
+                        <li>Pazar trendlerini takip edin</li>
+                        <li>İyileştirme alanlarını tespit edin</li>
+                    </ul>
+                    <p>Veriye dayalı kararlar alarak işletmenizin rekabet gücünü artırın ve pazardaki konumunuzu güçlendirin.</p>
+                `
+            },
+            {
+                title: "İletişim Araçları",
+                icon: "comments",
+                content: `
+                    <h2>İletişim Araçları</h2>
+                    <div class="modal-feature-icon"><i class="fas fa-comments"></i></div>
+                    <p>Güvenli messaging sistemi ile potansiyel iş ortaklarınızla kolayca iletişim kurun.</p>
+                    <h3>Bu özellik ile:</h3>
+                    <ul>
+                        <li>Güvenli ve özel mesajlaşma imkanı</li>
+                        <li>Dosya paylaşımı ve belge transferi</li>
+                        <li>Görüntülü görüşme seçeneği</li>
+                        <li>İletişim geçmişinizi kolayca takip edin</li>
+                    </ul>
+                    <p>İş ortaklarınızla profesyonel bir iletişim kanalı kurarak işbirliği süreçlerinizi hızlandırın.</p>
+                `
+            }
+        ];
+
+        // Open the feature modal
+        function openFeatureModal(index) {
+            currentFeatureIndex = index;
+            updateModalContent();
+            featureModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        }
+
+        // Close the feature modal
+        function closeFeatureModal() {
+            featureModal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+
+        // Navigate between features
+        function navigateFeature(direction) {
+            currentFeatureIndex = (currentFeatureIndex + direction + featureData.length) % featureData.length;
+            updateModalContent();
+        }
+
+        // Update the modal content based on the current feature index
+        function updateModalContent() {
+            const feature = featureData[currentFeatureIndex];
+            modalBody.innerHTML = feature.content;
+            
+            // Update navigation dots
+            modalDots.innerHTML = '';
+            for (let i = 0; i < featureData.length; i++) {
+                const dot = document.createElement('span');
+                dot.className = 'dot' + (i === currentFeatureIndex ? ' active' : '');
+                dot.onclick = () => openFeatureModal(i);
+                modalDots.appendChild(dot);
+            }
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target === featureModal) {
+                closeFeatureModal();
+            }
+        }
+
+        // Close modal with ESC key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeFeatureModal();
+            }
+        });
+
+        // Initialize mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const nav = document.querySelector('nav');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html> 
